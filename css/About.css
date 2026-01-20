@@ -1,0 +1,257 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #1f2020;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  background-color: rgba(27, 27, 27, 1);
+  width: 100%;
+  height: 3.7em;
+  flex: 0 0 3.7em;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  overflow: hidden;
+}
+
+li {
+  margin: 0 0.4em;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+  font-size: 16px;
+  padding: 0.75em 1em;
+  transition: color 200ms ease;
+}
+
+a:hover,
+a:focus {
+  color: white;
+  outline: none;
+}
+
+a:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+#NameTag {
+  margin-right: auto;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 24px;
+  color: white;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transition: opacity 300ms ease;
+  pointer-events: none;
+  z-index: 900;
+}
+
+#overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  padding: 0 0.5em;
+  background: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 200ms ease;
+}
+
+.menu-toggle:hover {
+  background-color: rgba(192, 189, 184, 0.185);
+}
+
+.menu-toggle:focus-visible {
+  outline: 2px solid white;
+  outline-offset: -2px;
+}
+
+#mainContent {
+  width: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
+  background-color: #1f2020;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  height: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  
+}
+
+section:first-child{
+  height: 37%;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 9vw, 6.5rem);
+  line-height: 0.95;
+  color: #fff;
+  word-wrap: break-word;
+  transform: translateY(-350%);
+  animation: onLoadSite 2s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.imgs{
+  flex: 0 0 40.4%;
+  height: 100%;
+  background-image: url("../images/Kanazawa.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: onLoadSite 2s ease forwards;
+}
+
+.about-text-div{
+  flex: 0 0 40.4%;
+  height: 100%;
+  min-width: 180px;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;  
+  animation: onLoadSite 1.6s ease forwards;
+}
+
+
+h2, p{
+  padding-bottom: 2rem;
+}
+
+@media only screen and (max-width: 770px) {
+  .menu-toggle {
+    display: block;
+    z-index: 1001;
+  }
+
+  #NameTag {
+    padding-left: 0.5em;
+    z-index: 1001;
+  }
+
+  li > a {
+    padding-right: 100%;
+  }
+
+  ul {
+    position: absolute;
+    top: 3.5em;
+    left: 0;
+    width: 50%;
+    height: calc(100vh - 3.5em);
+    background-color: rgba(27, 27, 27, 1);
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: transform 300ms ease;
+    display: flex;
+    pointer-events: none;
+    z-index: 1000;
+  }
+
+  ul li {
+    margin: 1em 0;
+  }
+
+  ul.show {
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+
+  nav.show {
+    width: 50%;
+    transition: width 400ms ease;
+  }
+
+  section {
+    flex-direction: column;
+    height: auto;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  section:first-child{
+    height: auto;
+    padding: 5rem 1rem;
+  }
+
+  .imgs{
+    flex: 0 0 auto;
+    width: 100%;
+    height: 40vh;
+  }
+
+  .about-text-div{
+    flex: 0;
+    width: 100%;
+  }
+
+  #mainContent {
+  width: 100%;
+  background-color: #1f2020;
+  display:flex;
+  flex-direction: column;
+  }
+
+}
+
+@keyframes onLoadSite {
+  0% {
+    transform: translateY(-300%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
