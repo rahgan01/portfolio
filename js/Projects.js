@@ -74,7 +74,7 @@ const PROJECTS = {
       "express-session",
       "Jikan API",
     ],
-    liveUrl: "https://animezone-gyq7.onrender.com/",
+    liveUrl: "https://animezone-1-lfpo.onrender.com/",
     codeUrl: "https://github.com/rahgan01/animezone",
   },
 
