@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rahul Gandhi</title>
+    <link rel="stylesheet" href="css/Project.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Toggle navigation menu"
+      >
+        ☰
+      </button>
+      <a href="index.html" id="NameTag">Rahul Gandhi</a>
+      <ul id="navLinks">
+        <li><a href="CV.html">CV</a></li>
+        <li><a href="Project.html" style="color: white">Projekt</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div id="overlay"></div>
+
+    <div id="mainContent">
+      <section class="projects-section">
+        <!-- ✅ PROJECTS GRID VIEW -->
+        <section id="projectsPage" class="projects-page">
+          <h2 class="projects-title">Projects</h2>
+
+          <div class="projects-grid">
+            <!-- Card 1 -->
+            <article class="project-card">
+              <a class="project-media" rel="noopener">
+                <img
+                  src="images/project1.png"
+                  alt="AnimeZone project preview"
+                />
+                <div class="project-tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">Node</span>
+                  <span class="tag">MongoDB</span>
+                </div>
+              </a>
+
+              <div class="project-body">
+                <h3 class="project-name" data-project-id="animezone">
+                  AnimeZone
+                </h3>
+                <p class="project-desc">
+                  Anime discovery web app with login/register, My List
+                  favorites, search, genres dropdown, caching, and MongoDB Atlas
+                  integration for persistent user data.
+                </p>
+
+                <div class="project-actions">
+                  <!-- ✅ make it a button + view-details class -->
+                  <button
+                    class="project-btn view-details"
+                    data-project-id="animezone"
+                  >
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!--<article class="project-card">
+        <a class="project-media" rel="noopener">
+          <img src="images/animezone.png" alt="Project preview" />
+          <div class="project-tags">
+            <span class="tag">C++</span>
+            <span class="tag">OpenGL</span>
+            <span class="tag">CMake</span>
+          </div>
+        </a>
+
+        <div class="project-body">
+          <h3 class="project-name" data-project-id="animezone">Voxel Engine</h3>
+          <p class="project-desc">
+            High-performance voxel engine featuring chunk streaming,
+            procedural terrain generation, and real-time lighting with
+            modern OpenGL rendering pipeline.
+          </p>
+
+          <div class="project-actions">
+            <button class="project-btn view-details" data-project-id="voxel">
+              View Details
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <a class="project-media" rel="noopener">
+          <img src="images/animezone.png" alt="Project preview" />
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">MongoDB</span>
+          </div>
+        </a>
+
+        <div class="project-body">
+          <h3 class="project-name" data-project-id="animezone">Chatbot Platform</h3>
+          <p class="project-desc">
+            AI chatbot service with multi-provider support, secure auth
+            flows, and monitoring tools — deployed with production-ready
+            APIs and clean UI.
+          </p>
+
+          <div class="project-actions">
+            <button class="project-btn view-details" data-project-id="chatbot">
+              View Details
+            </button>
+          </div>
+        </div>
+      </article>-->
+          </div>
+        </section>
+
+        <!-- ✅ DETAILS VIEW -->
+        <section id="detailsPage" class="details-page" hidden>
+          <button id="backToProjects" class="back-btn">
+            ← Back to all projects
+          </button>
+
+          <div class="details-layout">
+            <div class="details-main">
+              <h1 id="detailsTitle" class="details-title">Project Title</h1>
+
+              <h2 class="details-h2">Overview</h2>
+              <p id="detailsOverview" class="details-text"></p>
+
+              <h2 class="details-h2">Key Features</h2>
+              <ul id="detailsFeatures" class="details-list"></ul>
+
+              <h2 class="details-h2">Solution</h2>
+              <p id="detailsSolution" class="details-text"></p>
+
+              <h2 class="details-h2">Outcome</h2>
+              <p id="detailsOutcome" class="details-text"></p>
+            </div>
+
+            <aside class="details-side">
+              <div class="details-card">
+                <h3 class="details-card-title">Project Information</h3>
+
+                <p class="details-label">Technologies</p>
+                <div id="detailsTech" class="details-tech"></div>
+
+                <div class="details-links">
+                  <a
+                    id="detailsLive"
+                    class="btn ghost wide"
+                    href="#"
+                    target="_blank"
+                    rel="noreferrer"
+                    style="color: white"
+                  >
+                    View Live Project
+                  </a>
+                  <a
+                    id="detailsCode"
+                    class="btn ghost wide"
+                    href="#"
+                    target="_blank"
+                    rel="noreferrer"
+                    style="color: white"
+                  >
+                    View Source Code
+                  </a>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </section>
+    </div>
+
+    <script src="js/Projects.js"></script>
+  </body>
+</html>
