@@ -79,14 +79,14 @@ const PROJECTS = {
   },
 
   voxel: {
-    title: "Voxel Engine",
-    overview: "High-performance voxel engine featuring chunk streaming, procedural terrain, and real-time lighting.",
-    features: ["Chunk streaming", "Procedural terrain", "Real-time lighting", "Modern OpenGL pipeline"],
-    solution: "Engine architecture with chunk management + rendering pipeline tuned for performance.",
-    outcome: "Smooth voxel world rendering with scalable streaming and lighting.",
-    tech: ["C++", "OpenGL", "CMake"],
-    liveUrl: "#",
-    codeUrl: "#",
+    title: "Weather App",
+    overview: "Weather Atlas is a responsive weather web app built with Next.js that lets users search any location and instantly see current conditions, hourly outlook, and a 7‑day forecast. It uses a server-side API route to securely fetch data, keeping the key off the client, and presents results in a clean, editorial UI with clear hierarchy and visual atmosphere.",
+    features: ["Location search by city or coordinates", "Current conditions with wind, humidity, UV, and visibility", "Hourly forecast and 7‑day outlook", "Air quality and alert messaging", "API key kept server-side via Next.js route"],
+    solution: "I designed a clean, responsive interface that makes weather data easy to scan at a glance, then backed it with a server‑side API route so the key stays secure. The app fetches current conditions, hourly snapshots, and a 7‑day outlook, and presents them with clear hierarchy, visual grouping, and friendly microcopy for fast decision‑making.",
+    outcome: "The result is a polished, portfolio‑ready weather app that feels fast, readable, and trustworthy on any screen size. Users can search any location and instantly get the details they need, while the backend keeps the API key protected and deployment‑ready for Vercel.",
+    tech: ["Next.js", "React", "TypeScript", "WeatherAPI", "Tailwind CSS"],
+    liveUrl: "https://weather-app-red-nine-d0ir46x0t8.vercel.app/",
+    codeUrl: "https://github.com/rahgan01/WeatherApp",
   },
 
   chatbot: {
